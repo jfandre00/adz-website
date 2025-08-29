@@ -1,0 +1,308 @@
+/* src/pages/HomePage/HomePage.css */
+
+/* --- Estilos Gerais --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  margin: 0 0.5rem;
+}
+
+.btn-primary {
+  background-color: #E67E22; /* Cobre Queimado */
+  color: #FFFFFF;
+  border-color: #E67E22;
+}
+
+.btn-primary:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: #E67E22;
+}
+
+.btn-secondary:hover {
+  background-color: #E67E22;
+  color: #FFFFFF;
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
+  background: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop') no-repeat center center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2C3E50;
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* --- About Section --- */
+.about-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(44, 62, 80, 0.1);
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.learn-more-link {
+  font-weight: 600;
+  color: #E67E22;
+  transition: opacity 0.3s ease;
+}
+
+.learn-more-link:hover {
+  opacity: 0.8;
+}
+
+/* --- Services Section --- */
+.services-section {
+  padding: 6rem 0;
+  background-color: #ECF0F1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(44, 62, 80, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #E67E22;
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  line-height: 1.6;
+}
+
+/* --- Portfolio Section --- */
+.portfolio-section {
+  padding: 6rem 0;
+  background-color: #FFFFFF;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 400px; /* Define uma altura fixa para os cartões */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(44, 62, 80, 0.9), transparent);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.project-overlay p {
+  margin: 0;
+  transform: translateY(20px);
+  transition: transform 0.4s ease 0.1s;
+}
+
+.project-card:hover .project-overlay h3,
+.project-card:hover .project-overlay p {
+    transform: translateY(0);
+}
+
+/* --- Novos Estilos para a Testimonials Section --- */
+.testimonials-section {
+  padding: 6rem 0;
+  background-color: #ECF0F1; /* Cinza Concreto */
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-content blockquote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: #34495E; /* Grafite */
+  margin: 0 0 2rem 0;
+  border: none;
+  padding: 0;
+}
+
+.testimonial-content cite {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #2C3E50; /* Azul Ardósia */
+}
+
+/* --- Novos Estilos para a CTA Section --- */
+.cta-section {
+  padding: 6rem 0;
+  background-color: #2C3E50; /* Azul Ardósia */
+  color: #FFFFFF; /* Branco Gelo */
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #ECF0F1; /* Cinza Concreto */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

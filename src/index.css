@@ -1,13 +1,28 @@
+/* Importar as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+/* Reset básico e definições globais */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', sans-serif; /* Fonte padrão para o corpo do texto */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF; /* Branco Gelo */
+  color: #34495E; /* Grafite */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilo base para os títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Fonte padrão para os títulos */
+  color: #2C3E50; /* Azul Ardósia */
+}
+
+/* Remove a decoração de links padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
 }

@@ -1,0 +1,56 @@
+/* src/components/Footer/Footer.css */
+.footer {
+  background-color: #2C3E50; /* Azul Ardósia */
+  color: #ECF0F1; /* Cinza Concreto */
+  padding: 3rem 0 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: #ECF0F1;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #E67E22; /* Cobre Queimado */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #34495E; /* Grafite */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}

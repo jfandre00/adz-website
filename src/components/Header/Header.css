@@ -1,0 +1,57 @@
+/* src/components/Header/Header.css */
+.header {
+  background-color: #FFFFFF; /* Branco Gelo */
+  padding: 1rem 0;
+  border-bottom: 1px solid #ECF0F1; /* Cinza Concreto */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.header nav a {
+  font-family: 'Inter', sans-serif;
+  color: #34495E; /* Grafite */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #E67E22; /* Cobre Queimado */
+}
+
+.quote-button {
+  background-color: #E67E22; /* Cobre Queimado */
+  color: #FFFFFF; /* Branco Gelo */
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-button:hover {
+  background-color: #d35400; /* Um tom mais escuro de Cobre */
+}
