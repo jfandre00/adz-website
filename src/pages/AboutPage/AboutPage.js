@@ -1,5 +1,6 @@
 // src/pages/AboutPage/AboutPage.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AboutPage.css';
 
 // Importar as imagens
@@ -85,7 +86,7 @@ function AboutPage() {
         <div className="container">
           <h2>Inspired by Our Story?</h2>
           <p>Let's start writing yours. Contact us to discuss how we can bring your next project to life.</p>
-          <button className="btn btn-primary">Get a Free Quote</button>
+          <Link to="/contact" className="btn btn-primary">Get a Free Quote</Link>
         </div>
       </section>
     </div>

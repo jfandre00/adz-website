@@ -107,6 +107,7 @@
 
 .about-image {
   flex: 1;
+  min-width: 40%; /* Garante que a imagem tenha um tamanho mínimo */
 }
 
 .about-image img {
@@ -130,13 +131,14 @@
   margin-bottom: 2rem;
 }
 
-.learn-more-link {
+.btn-link { /* Classe adicionada para o link "Learn More" */
   font-weight: 600;
   color: #E67E22;
   transition: opacity 0.3s ease;
+  text-decoration: none;
 }
 
-.learn-more-link:hover {
+.btn-link:hover {
   opacity: 0.8;
 }
 
@@ -158,13 +160,13 @@
   padding: 2.5rem;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(44, 62, 80, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
@@ -200,13 +202,13 @@
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
-  height: 400px; /* Define uma altura fixa para os cartões */
+  height: 400px; 
 }
 
 .project-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+  object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -254,15 +256,24 @@
     transform: translateY(0);
 }
 
-/* --- Novos Estilos para a Testimonials Section --- */
+/* --- Testimonials Section --- */
 .testimonials-section {
   padding: 6rem 0;
   background-color: #ECF0F1; /* Cinza Concreto */
 }
 
-.testimonial-content {
+.testimonial-wrapper {
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* <<< CORREÇÃO: Alinha os itens */
+  min-height: 250px;
+}
+
+.testimonial-content {
+  flex-grow: 1;
+  padding: 0 1.5rem; /* Espaço entre texto e setas */
   text-align: center;
 }
 
@@ -274,7 +285,6 @@
   color: #34495E; /* Grafite */
   margin: 0 0 2rem 0;
   border: none;
-  padding: 0;
 }
 
 .testimonial-content cite {
@@ -284,7 +294,22 @@
   color: #2C3E50; /* Azul Ardósia */
 }
 
-/* --- Novos Estilos para a CTA Section --- */
+.nav-arrow {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: #bdc3c7;
+  cursor: pointer;
+  padding: 1rem;
+  transition: color 0.3s ease;
+  flex-shrink: 0; /* Impede que as setas encolham */
+}
+
+.nav-arrow:hover {
+  color: #E67E22;
+}
+
+/* --- CTA Section --- */
 .cta-section {
   padding: 6rem 0;
   background-color: #2C3E50; /* Azul Ardósia */
@@ -305,4 +330,63 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* --- MEDIA QUERIES FOR RESPONSIVENESS --- */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-bottom: 2rem;
+  }
+
+  .services-grid, .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-wrapper {
+    padding: 0 1rem;
+    min-height: 200px; 
+  }
+  
+  .testimonial-content {
+    padding: 0 1rem;
+    order: 2; /* Garante que o texto fique no meio */
+  }
+
+  .testimonial-content blockquote {
+    font-size: 1.2rem;
+  }
+
+  .nav-arrow {
+    font-size: 2rem;
+  }
+
+  .left-arrow {
+    order: 1; /* Coloca a seta na esquerda */
+  }
+  
+  .right-arrow {
+    order: 3; /* Coloca a seta na direita */
+  }
 }

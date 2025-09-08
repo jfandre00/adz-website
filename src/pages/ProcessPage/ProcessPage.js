@@ -1,5 +1,6 @@
 // src/pages/ProcessPage/ProcessPage.js
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import './ProcessPage.css';
 
 // Importar os ícones
@@ -72,7 +73,7 @@ function ProcessPage() {
         <div className="container">
           <h2>Let's Start Your Step One</h2>
           <p>Schedule your free, no-obligation consultation today and take the first step towards your new home.</p>
-          <button className="btn btn-primary">Schedule Your Consultation</button>
+          <Link to="/contact" className="btn btn-primary">Schedule Your Consultation</Link>
         </div>
       </section>
     </div>

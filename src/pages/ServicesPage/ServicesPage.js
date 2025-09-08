@@ -1,5 +1,6 @@
 // src/pages/ServicesPage/ServicesPage.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ServicesPage.css';
 
 // Importar as imagens dos serviços
@@ -42,7 +43,7 @@ function ServicesPage() {
                 <div className="service-card-content">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  <button className="btn btn-secondary">Learn More</button>
+                  <Link to="/contact" className="btn btn-primary">Learn More</Link>
                 </div>
               </div>
             ))}
@@ -54,7 +55,7 @@ function ServicesPage() {
         <div className="container">
           <h2>Ready to Discuss Your Project?</h2>
           <p>Whether you have a detailed plan or just an idea, our team is here to help you take the next step.</p>
-          <button className="btn btn-primary">Get a Free Quote</button>
+          <Link to="/contact" className="btn btn-primary">Get a Free Quote</Link>
         </div>
       </section>
     </div>

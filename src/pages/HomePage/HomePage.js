@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 import teamImage from '../../assets/team-image.jpg';
 import project1 from '../../assets/project-1.jpg';
 import project2 from '../../assets/project-2.jpg';
 import project3 from '../../assets/project-3.jpg';
-import { FaHardHat, FaPaintRoller, FaBuilding } from 'react-icons/fa';
+import { FaHardHat, FaPaintRoller, FaBuilding, FaChevronLeft, FaChevronRight  } from 'react-icons/fa'; // <<< Ícones das setas sendo importados nessa atualização
 
 const HeroSection = () => {
   return (
@@ -14,8 +15,8 @@ const HeroSection = () => {
         <h1>Building Your Dream Home in the USA</h1>
         <p>Custom, quality, and commitment from foundation to finish.</p>
         <div className="hero-buttons">
-          <button className="btn btn-primary">View Our Work</button>
-          <button className="btn btn-secondary">Get a Free Quote</button>
+          <Link to="/our-work" className="btn btn-primary">View Our Work</Link>
+          <Link to="/contact" className="btn btn-secondary">Get a Free Quote</Link>
         </div>
       </div>
     </section>
@@ -34,7 +35,7 @@ const AboutSection = () => {
           <p>
             For over 15 years, ADZ Construction Co. has been turning visions into reality. We are a family-owned business dedicated to delivering exceptional quality and building lasting relationships with our clients across the United States.
           </p>
-          <a href="/about" className="learn-more-link">Learn More About Us →</a>
+          <Link to="/about" className="btn-link">Learn More About Us →</Link>
         </div>
       </div>
     </section>
@@ -64,7 +65,7 @@ const ServicesSection = () => {
           </div>
         </div>
         <div className="text-center">
-            <button className="btn btn-primary">See All Services</button>
+            <Link to="/services" className="btn btn-primary">See All Services</Link>
         </div>
       </div>
     </section>
@@ -100,7 +101,7 @@ const PortfolioSection = () => {
           </div>
         </div>
         <div className="text-center">
-            <button className="btn btn-primary">Explore Our Full Portfolio</button>
+            <Link to="/portfolio" className="btn btn-primary">Explore Our Full Portfolio</Link>
         </div>
       </div>
     </section>
@@ -108,25 +109,68 @@ const PortfolioSection = () => {
 };
 
 // Nova secção "Testimonials"
+// --- ATUALIZANDO A SECÇÃO DE DEPOIMENTOS ---
+
 const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      quote: "ADZ made our dream home a reality. The process was smooth, the communication was excellent, and the quality is outstanding. We couldn't be happier and highly recommend them!",
+      author: "John & Jane Doe",
+      location: "Miami, FL"
+    },
+    {
+      quote: "The renovation of our commercial space was handled with utmost professionalism. They finished on time and on budget, which was crucial for our business. Fantastic team.",
+      author: "ACME Corp",
+      location: "Tampa, FL"
+    },
+    {
+      quote: "From the initial design to the final touches, every step was a pleasure. Their attention to detail is what sets them apart. We love our new kitchen!",
+      author: "Emily White",
+      location: "Orlando, FL"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevTestimonial = () => {
+    const isFirstTestimonial = currentIndex === 0;
+    const newIndex = isFirstTestimonial ? testimonials.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextTestimonial = () => {
+    const isLastTestimonial = currentIndex === testimonials.length - 1;
+    const newIndex = isLastTestimonial ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
   return (
     <section className="testimonials-section">
       <div className="container">
         <h2 className="section-title">What Our Clients Say</h2>
         <div className="testimonial-content">
-          <blockquote>
-            “ADZ made our dream home a reality. The process was smooth, the communication was excellent, and the quality is outstanding. We couldn't be happier and highly recommend them!”
-          </blockquote>
-          <cite>
-            <strong>John & Jane Doe</strong>
-            <br />
-            Miami, FL
-          </cite>
+          <button className="nav-arrow left-arrow" onClick={prevTestimonial} aria-label="Previous testimonial">
+            <FaChevronLeft />
+          </button>
+          <div className="testimonial-text">
+            <blockquote>
+              “{testimonials[currentIndex].quote}”
+            </blockquote>
+            <cite>
+              <strong>{testimonials[currentIndex].author}</strong>
+              <br />
+              {testimonials[currentIndex].location}
+            </cite>
+          </div>
+          <button className="nav-arrow right-arrow" onClick={nextTestimonial} aria-label="Next testimonial">
+            <FaChevronRight />
+          </button>
         </div>
       </div>
     </section>
   );
 };
+
 
 // Nova secção "Final CTA"
 const CtaSection = () => {
@@ -135,7 +179,7 @@ const CtaSection = () => {
       <div className="container">
         <h2>Ready to Start Your Project?</h2>
         <p>Let's talk about your vision. Contact us today for a no-obligation consultation.</p>
-        <button className="btn btn-primary">Request a Free Quote</button>
+        <Link to="/contact" className="btn btn-primary">Request a Free Quote</Link>
       </div>
     </section>
   );
