@@ -1,4 +1,3 @@
-// src/pages/HomePage/HomePage.js
 import React from 'react';
 import './HomePage.css';
 import teamImage from '../../assets/team-image.jpg';

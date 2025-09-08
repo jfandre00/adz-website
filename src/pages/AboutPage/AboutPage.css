@@ -1,0 +1,178 @@
+/* src/pages/AboutPage/AboutPage.css */
+.about-page {
+  color: #34495E; /* Grafite */
+}
+
+.page-header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f7f7f7;
+}
+
+.page-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: #2C3E50; /* Azul Ardósia */
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-main-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.story-section {
+  padding: 5rem 0;
+}
+
+.story-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-text h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #2C3E50; /* Azul Ardósia */
+  margin-bottom: 1.5rem;
+}
+
+.story-text p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.story-image-container {
+  flex: 1;
+}
+
+.story-image-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.leaders-section {
+  padding: 5rem 0;
+  background-color: #ECF0F1; /* Cinza Concreto */
+  text-align: center;
+}
+
+.leaders-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #2C3E50; /* Azul Ardósia */
+    margin-bottom: 3rem;
+}
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.leader-card {
+  text-align: center;
+}
+
+.leader-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.leader-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #2C3E50;
+  margin-bottom: 0.25rem;
+}
+
+.leader-card p {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  color: #34495E;
+}
+
+.why-choose-us-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.why-choose-us-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  color: #2C3E50; /* Azul Ardósia */
+  margin-bottom: 3rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.why-item .icon {
+  font-size: 2.5rem;
+  color: #E67E22; /* Cobre Queimado */
+  margin-top: 5px;
+}
+
+.why-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #2C3E50;
+  margin-bottom: 0.5rem;
+}
+
+.why-item p {
+  line-height: 1.7;
+}
+
+.about-cta-section {
+  padding: 6rem 0;
+  background-color: #2C3E50; /* Azul Ardósia */
+  color: #FFFFFF; /* Branco Gelo */
+  text-align: center;
+}
+
+.about-cta-section h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.about-cta-section p {
+  font-size: 1.1rem;
+  color: #ECF0F1; /* Cinza Concreto */
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
