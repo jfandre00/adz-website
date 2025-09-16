@@ -15,7 +15,7 @@ const HeroSection = () => {
         <h1>Building Your Dream Home in the USA</h1>
         <p>Custom, quality, and commitment from foundation to finish.</p>
         <div className="hero-buttons">
-          <Link to="/our-work" className="btn btn-primary">View Our Work</Link>
+          <Link to="/portfolio" className="btn btn-primary">View Our Work</Link>
           <Link to="/contact" className="btn btn-secondary">Get a Free Quote</Link>
         </div>
       </div>

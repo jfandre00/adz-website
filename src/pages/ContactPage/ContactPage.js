@@ -43,7 +43,11 @@ function ContactPage() {
 
             <div className="contact-form">
               <h2>Send Us a Message</h2>
-              <form>
+              {/* Formulário integrado com o serviço Static Forms */}
+              <form action="https://api.staticforms.xyz/submit" method="POST">
+                <input type="hidden" name="apiKey" value="40b582ef-042e-4b9e-a794-ec30aa7b2a26" />
+                <input type="hidden" name="redirectTo" value="https://adzconstructionco.com/thanks.html" />
+
                 <div className="form-group">
                   <label htmlFor="name">Full Name*</label>
                   <input type="text" id="name" name="name" required />
@@ -64,6 +68,13 @@ function ContactPage() {
                   <label htmlFor="message">Your Message*</label>
                   <textarea id="message" name="message" required></textarea>
                 </div>
+
+                {/* IMPORTANTE: Para que o reCAPTCHA funcione, adicione a seguinte linha
+                  de código ao seu ficheiro public/index.html, antes da tag de fecho </head>:
+                  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                */}
+                <div className="g-recaptcha" data-sitekey="6LfxZQIrAAAAADxldgVOjOjMxreqhMicktR7esWB"></div>
+
                 <button type="submit" className="btn btn-primary">Submit Inquiry</button>
               </form>
             </div>

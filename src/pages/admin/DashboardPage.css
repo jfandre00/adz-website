@@ -1,0 +1,129 @@
+/* src/pages/admin/DashboardPage.css */
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.dashboard-header p {
+  font-family: 'Inter', sans-serif;
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+/* Estilos para os cartões de resumo */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon.clients {
+  color: #3498db;
+  background-color: #eaf5fc;
+}
+.card-icon.projects {
+  color: #9b59b6;
+  background-color: #f5eef8;
+}
+.card-icon.estimates {
+  color: #2ecc71;
+  background-color: #eafaf1;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+.card-info p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Estilos para as listas de recentes */
+.recent-activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.recent-list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.recent-list h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #2C3E50;
+  margin-top: 0;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recent-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f4f6f9;
+}
+
+.recent-list li:last-child {
+  border-bottom: none;
+}
+
+.recent-list li span:first-child {
+  font-weight: 600;
+}
+
+.recent-list li .status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status.planeamento {
+  background-color: #eaf5fc;
+  color: #3498db;
+}
