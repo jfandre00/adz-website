@@ -52,7 +52,7 @@ To run the frontend part locally, follow the steps below:
 
 Clone the repository:
 
-git clone [https://github.com/your-username/adz-website.git](https://github.com/your-username/adz-website.git)
+git clone [https://github.com/jfandre00/adz-website.git](https://github.com/jfandre00/adz-website.git)
 
 Navigate to the project directory:
 
@@ -84,8 +84,7 @@ Open http://localhost:3000 in your browser to see the application.
 👨‍💻 Author
 André L. M. Ferreira
 
-
--------------------------------------
+---
 
 ADZ Construction Co. - Website & Sistema de Gestão
 
@@ -139,7 +138,7 @@ Para executar a parte do frontend localmente, siga os passos abaixo:
 
 Clone o repositório:
 
-git clone [https://github.com/seu-usuario/adz-website.git](https://github.com/seu-usuario/adz-website.git)
+git clone [https://github.com/jfandre00/adz-website.git](https://github.com/jfandre00/adz-website.git)
 
 Navegue até ao diretório do projeto:
 
