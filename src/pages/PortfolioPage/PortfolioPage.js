@@ -1,4 +1,3 @@
-// src/pages/PortfolioPage/PortfolioPage.js
 import React, { useState } from 'react';
 import './PortfolioPage.css';
 

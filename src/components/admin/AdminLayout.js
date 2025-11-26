@@ -1,4 +1,3 @@
-// src/components/admin/AdminLayout.js
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './AdminLayout.css';

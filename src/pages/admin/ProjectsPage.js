@@ -1,4 +1,4 @@
-// src/pages/admin/ProjectsPage.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './ProjectsPage.css'; // Usaremos um CSS dedicado

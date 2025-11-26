@@ -1,4 +1,3 @@
-// src/pages/admin/DashboardPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './DashboardPage.css';

@@ -1,4 +1,3 @@
-// src/pages/admin/EstimatesPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './EstimatesPage.css';

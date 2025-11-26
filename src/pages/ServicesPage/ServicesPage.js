@@ -1,4 +1,3 @@
-// src/pages/ServicesPage/ServicesPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServicesPage.css';
